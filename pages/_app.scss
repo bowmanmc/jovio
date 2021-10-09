@@ -1,0 +1,35 @@
+@import 'sass/colors';
+@import 'sass/typography';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    @include fontsize($fontsize-normal);
+    display: flex;
+    font-family: $fontstack-body;
+    min-height: 100%;
+}
+
+#__next {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontstack-headings;
+    font-weight: $fontweight-bold;
+}

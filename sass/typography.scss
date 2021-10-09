@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:ital,wght@0,800;1,800&display=swap');
+
+$fontstack-body: 'Esteban', serif;
+$fontstack-headings: 'Montserrat', sans-serif;
+
+$fontweight-normal: 400;
+$fontweight-bold: 800;
+
+$fontsize-xs: 12px;
+$fontsize-small: 14px;
+$fontsize-normal: 18px;
+$fontsize-large: 24px;
+$fontsize-xl: 48px;
+$fontsize-xxl: 72px;
+
+@mixin fontsize($base) {
+    font-size: $base;
+    line-height: $base * 1.35;
+}

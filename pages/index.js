@@ -1,9 +1,8 @@
-import { signIn, signOut, useSession } from 'next-auth/client';
-import styles from './index.module.scss';
+import { signIn, signOut, useSession } from "next-auth/client";
 
+import styles from "./index.module.scss";
 
 const HomePage = () => {
-
     const [session, loading] = useSession();
     if (!session && !loading) {
         signIn();
@@ -13,7 +12,9 @@ const HomePage = () => {
     return (
         <div className={styles.Page}>
             <h1>Home Page</h1>
-            <p>This is where I'll stick the home page. Should require a logged in user.</p>
+            <p>
+                This is where I'll stick the home page. Should require a logged in user.
+            </p>
             <p>User: {name}</p>
             <hr />
             <button onClick={() => signOut()}>Sign Out</button>

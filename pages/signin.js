@@ -1,4 +1,5 @@
 import { getProviders, signIn, useSession } from 'next-auth/client';
+import Image from 'next/image';
 
 import styles from './signin.module.scss';
 
@@ -15,12 +16,22 @@ const SigninPage = ({providers}) => {
 
     return (
         <div className={styles.Page}>
-            <h1>Sign In</h1>
-            {Object.values(providers).map(provider => (
-                <div key={provider.name}>
-                    <button onClick={() => signIn(provider.id)}>Custom Sign in with {provider.name}</button>
-                </div>
-            ))}
+            <div className={styles.SignInContainer}>
+                {Object.values(providers).map(provider => (
+                    <div key={provider.id}>
+                        <button
+                            className={styles.SignInButton}
+                            onClick={() => signIn(provider.id)}>
+                            <Image
+                                src={`/images/btn-${provider.id}.png`}
+                                alt={`Sign in with ${provider.name}`}
+                                height={92 / 1.75}
+                                width={382 / 1.75}
+                                />
+                        </button>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

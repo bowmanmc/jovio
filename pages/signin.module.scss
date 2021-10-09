@@ -1,4 +1,32 @@
+@import 'sass/colors';
+@import 'sass/devices';
 
 .Page {
-    border: 1px solid red;
+    background: $color-yellow url('/images/JovioBackground.svg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+
+    @include desktop {
+        justify-content: flex-end;
+    }
+}
+
+.SignInContainer {
+    align-items: center;
+    background: $color-gray-98;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+    @include desktop {
+        flex: 0.5;
+    }
+}
+
+.SignInButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }

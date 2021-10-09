@@ -1,0 +1,14 @@
+@import 'sass/colors';
+
+.Navbar {
+    align-items: center;
+    background: $color-dark;
+    display: flex;
+}
+
+.Navbar__logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0.25em 0.5em;
+}
