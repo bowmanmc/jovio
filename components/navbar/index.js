@@ -9,8 +9,8 @@ const Navbar = () => {
                 <Image
                     src='/images/jovio-navlogo.svg'
                     alt='Jovio Logo'
-                    height='36px'
-                    width='128px'
+                    height={162 / 6}
+                    width={590 / 6}
                 />
             </div>
         </div>

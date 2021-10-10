@@ -13,7 +13,7 @@ const HomePage = () => {
         <div className={styles.Page}>
             <h1>Home Page</h1>
             <p>
-                This is where I'll stick the home page. Should require a logged in user.
+                This is where I&apos;ll stick the home page. Should require a logged in user.
             </p>
             <p>User: {name}</p>
             <hr />

@@ -1,5 +1,6 @@
 @import 'sass/colors';
 @import 'sass/devices';
+@import 'sass/typography';
 
 .Page {
     background: $color-yellow url('/images/JovioBackground.svg') center center no-repeat;
@@ -13,20 +14,41 @@
     }
 }
 
-.SignInContainer {
-    align-items: center;
+.Container {
+    align-items: stretch;
     background: $color-gray-98;
     display: flex;
     flex: 1;
+    flex-direction: column;
     justify-content: center;
+    padding: 2.0em;
 
     @include desktop {
         flex: 0.5;
     }
 }
 
-.SignInButton {
+.Button {
     background: transparent;
     border: none;
     cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.Intro {
+}
+
+.Providers {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 2.0em;
+}
+
+.Legal {
+    @include fontsize($fontsize-small);
+    color: $color-gray-40;
+    margin-top: 4.0em;
 }

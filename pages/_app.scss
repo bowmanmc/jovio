@@ -32,4 +32,22 @@ h5,
 h6 {
     font-family: $fontstack-headings;
     font-weight: $fontweight-bold;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    @include fontsize($fontsize-xl);
+}
+
+h2 {
+    @include fontsize($fontsize-large);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    // basically just bold...
+    @include fontsize($fontsize-normal);
 }
